@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 
 import Heart from '../../assets/Heart';
 import './Post.css';
+import { useContext } from 'react';
 
 function Posts() {
 
