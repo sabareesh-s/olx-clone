@@ -26,7 +26,7 @@ function App() {
       <Post>
       
       <Router basename={process.env.PUBLIC_URL}>
-        <Route exact path='/'>
+        <Route exact path='/olx-clone'>
           <Home />
         </Route>
         <Route path='/signup'>
