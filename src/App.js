@@ -25,7 +25,7 @@ function App() {
     <div className='HomeClass'>
       <Post>
       
-      <Router basename={process.env.url('https://sabareesh-s.github.io/olx-clone/')}>
+      <Router>
         <Route exact path='/'>
           <Home />
         </Route>
