@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-// import { BrowserRouter as Router,Route } from 'react-router-dom';
-import { HashRouter as Router,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Route } from 'react-router-dom';
 import Signup from './Pages/Signup'
 import Login from './Pages/Login'
 import Create from './Pages/Create'
@@ -26,7 +25,7 @@ function App() {
     <div className='HomeClass'>
       <Post>
       
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Route exact path='/olx-clone'>
           <Home />
         </Route>
