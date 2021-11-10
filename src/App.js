@@ -26,7 +26,7 @@ function App() {
       <Post>
       
       <Router>
-        <Route exact path='/'>
+        <Route exact path='/olx-clone'>
           <Home />
         </Route>
         <Route path='/signup'>
