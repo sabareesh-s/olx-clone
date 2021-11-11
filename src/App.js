@@ -12,8 +12,10 @@ import './App.css';
 import Home from './Pages/Home';
 import { AuthContext, FirebaseContext } from './store/Context';
 import Post from './store/PostContext'
+import { render } from 'react-dom';
 
 function App() {
+  
   const {setUser} = useContext(AuthContext)
   const {firebase} = useContext(FirebaseContext)
   useEffect(() => {
@@ -21,31 +23,23 @@ function App() {
        setUser(user)
      })
   })
+  
   return (
     <div className='HomeClass'>
       <Post>
       
       <Router>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-        <Route path='/signup'>
-          <Signup />
-        </Route>
-        <Route path='/login'>
-          <Login />
-        </Route>
-        <Route path='/create'>
-          <Create />
-        </Route>
-        <Route path='/view'>
-          <View />
-        </Route>
+        <Route exact path='/' component={Home}/>
+        <Route path='/signup' component={Signup}/>
+        <Route path='/login' component={Login}/>
+        <Route path='/create' component={Create}/>
+        <Route path='/view' component={View}/>
       </Router>
       
       </Post>
     </div>
   );
 }
+
 
 export default App;
